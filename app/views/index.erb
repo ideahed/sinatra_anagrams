@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Anagram Generator!</h1>
+  
+  <form action="/anagram" method="post">
+    <p>Enter word you'd like to see all anagrams for:</p>
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="Find Words">
+  </form>
+
+  <% if @anagrams
+    @anagrams.each do |anagram| %>
+    <p class="anagram"><%= anagram %></p>
+    <br>
+    <% end %>
+  <% end %>
+</div>
